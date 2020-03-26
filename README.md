@@ -7,3 +7,13 @@ an earlier version   (5.7)
 
 ### Admin
 admin mypswd_DB!
+
+### Creating a DB
+mysql -u admin -p
+```
+mysql> CREATE DATABASE phpdb;
+```
+#### Creating user
+```
+mysql> CREATE USER 'php_user'@'localhost' IDENTIFIED BY 'the password';
+```
