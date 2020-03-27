@@ -63,7 +63,8 @@ sudo service apache2 reload
 
 ### Admin User
 phpmyadmin  
-..._DB!
+..._DB!  
+To grant it all the rights I used user/paswword found in /etc/mysql/debian.cnf (debian-sys-maint)
 
 ### User lambda
 It seems like for **phpmyadmin** to create a user it needs to select **Authentication Plugin** **Unix socket based auth**
