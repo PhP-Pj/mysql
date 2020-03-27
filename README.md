@@ -36,5 +36,27 @@ or
 GRANT SELECT, INSERT, DELETE ON database_name.* TO database_user@'localhost';  
 FLUSH PRIVILEGES;  
 
+## PhpMyAdmin
 
+See:
+* https://linuxize.com/post/how-to-install-and-secure-phpmyadmin-with-apache-on-ubuntu-18-04/
+* https://hostadvice.com/how-to/how-to-install-apache-mysql-php-on-an-ubuntu-18-04-vps/  
+
+UI used to adminstrate mysql.  
+It runs on apache2 so the php module for apache needs to be installed:
+```
+sudo apt-get install php libapache2-mod-php
+```
+
+But I add to follow https://askubuntu.com/questions/387062/how-to-solve-the-phpmyadmin-not-found-issue-after-upgrading-php-and-apache to add the phpmyadmin site
+
+TL;DR;
+```
+sudo ln -s /usr/share/phpmyadmin /var/www/html
+sudo ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phpmyadmin.conf
+sudo a2enconf phpmyadmin.conf
+sudo service apache2 reload
+
+
+```
 
