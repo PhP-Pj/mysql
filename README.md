@@ -38,10 +38,6 @@ FLUSH PRIVILEGES;
 
 ## PhpMyAdmin
 
-**User:**  
-phpmyadmin  
-..._DB!
-
 See:
 * https://linuxize.com/post/how-to-install-and-secure-phpmyadmin-with-apache-on-ubuntu-18-04/
 * https://hostadvice.com/how-to/how-to-install-apache-mysql-php-on-an-ubuntu-18-04-vps/  
@@ -64,3 +60,10 @@ sudo service apache2 reload
 
 ```
 
+
+### Admin User
+phpmyadmin  
+..._DB!
+
+### User lambda
+It seems like for **phpmyadmin** to create a user it needs to select **Authentication Plugin** **Unix socket based auth**
