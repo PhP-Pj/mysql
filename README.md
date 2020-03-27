@@ -38,6 +38,10 @@ FLUSH PRIVILEGES;
 
 ## PhpMyAdmin
 
+**User:** 
+phpamyadmin
+..._DB!
+
 See:
 * https://linuxize.com/post/how-to-install-and-secure-phpmyadmin-with-apache-on-ubuntu-18-04/
 * https://hostadvice.com/how-to/how-to-install-apache-mysql-php-on-an-ubuntu-18-04-vps/  
