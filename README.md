@@ -18,6 +18,8 @@ see https://linuxize.com/post/how-to-manage-mysql-databases-and-users-from-the-c
 * privileges
 * ...
 
+update mysql.user set Grant_priv='Y' where host='localhost' and user='admin';
+
 ### Creating a DB
 mysql -u admin -p
 ```
@@ -29,5 +31,10 @@ mysql> CREATE USER 'php_user'@'localhost' IDENTIFIED BY 'the password';
 ```
 
 #### Grant privileges
-GRANT ALL PRIVILEGES ON database_name.* TO 'database_user'@'localhost';
-GRANT SELECT, INSERT, DELETE ON database_name.* TO database_user@'localhost';
+GRANT ALL PRIVILEGES ON database_name.* TO 'database_user'@'localhost';  
+or  
+GRANT SELECT, INSERT, DELETE ON database_name.* TO database_user@'localhost';  
+FLUSH PRIVILEGES;  
+
+
+
