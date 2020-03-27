@@ -39,7 +39,7 @@ FLUSH PRIVILEGES;
 ## PhpMyAdmin
 
 **User:**  
-phpamyadmin
+phpamyadmin  
 ..._DB!
 
 See:
