@@ -1,6 +1,10 @@
 # mysql
 Install
-https://phoenixnap.com/kb/how-to-install-mysql-on-ubuntu-18-04 Problem with signature.  
+https://phoenixnap.com/kb/how-to-install-mysql-on-ubuntu-18-04 Problem with signature, so I removed the package:  
+```
+sudo dpkg --remove mysql-apt-config
+```
+
 Opting for https://linuxize.com/post/how-to-install-mysql-on-ubuntu-18-04/
 an earlier version   (5.7)
 
