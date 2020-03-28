@@ -9,11 +9,18 @@ Opting for https://linuxize.com/post/how-to-install-mysql-on-ubuntu-18-04/
 an earlier version   (5.7)
 
 ### Root
-mysql -u root -p or  
 sudo mysql
+root uses socket auth so the following command won't work.
+mysql -u root -p or  
+
 
 ### Admin
-admin mypswd_DB!
+Created an **admin** user (same as root) using native auth so the following command works.
+```
+mysql -u admin -p
+```
+admin password root
+
 
 ### Admin comnands
 see https://linuxize.com/post/how-to-manage-mysql-databases-and-users-from-the-command-line/ to  
@@ -73,5 +80,4 @@ To grant it all the rights I used user/paswword found in
 less /etc/mysql/debian.cnf (debian-sys-maint)
 ```
 
-### User lambda
-It seems like for **phpmyadmin** to create a user it needs to select **Authentication Plugin** **Unix socket based auth**
+
