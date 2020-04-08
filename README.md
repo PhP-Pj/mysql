@@ -58,7 +58,12 @@ After rebooting I gor this error while trying to open a connection with SQLDEVEL
 ```
 Status : Failure -Test failed: The server time zone value 'CEST' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the 'serverTimezone' configuration property) to use a more specifc time zone va
 ```
-To fix it I updated the mysql timezone tables with
+To fix it I updated the mysql timezone tables in mysql databes with this script
+* TABLE time_zone;
+* TABLE time_zone_name;
+* TABLE time_zone_transition;
+* TABLE time_zone_transition_type;
+
 ```
 $ mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root -p mysql
 ```
