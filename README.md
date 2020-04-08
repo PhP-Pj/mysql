@@ -1,5 +1,8 @@
-# mysql
-Install
+# mysql and Phpmyadmin
+
+## mysql
+
+### Install
 https://phoenixnap.com/kb/how-to-install-mysql-on-ubuntu-18-04 Problem with signature, so I removed the package:  
 ```
 sudo dpkg --remove mysql-apt-config
@@ -46,6 +49,32 @@ GRANT ALL PRIVILEGES ON database_name.* TO 'database_user'@'localhost';
 or  
 GRANT SELECT, INSERT, DELETE ON database_name.* TO database_user@'localhost';  
 FLUSH PRIVILEGES;  
+
+### Issues
+
+#### Timezone
+
+After rebooting I gor this error while trying to open a connection with SQLDEVELOPER:
+```
+Status : Failure -Test failed: The server time zone value 'CEST' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the 'serverTimezone' configuration property) to use a more specifc time zone va
+```
+To fix it I updated the mysql timezone tables with
+```
+$ mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root -p mysql
+```
+
+Then updated **/etc/mysql/my.cnf** and added at the bottom
+
+```
+[mysqld]
+default_time_zone = Europe/Paris
+```
+And finally 
+```
+$ sudo service mysql restart
+```
+
+
 
 ## PhpMyAdmin
 
